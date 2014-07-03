@@ -22,16 +22,232 @@
 
 		<!-- Prevents smartphones from scaling pages down -->
 		<meta name="viewport" content="initial-scale=1">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#EducationWrapper").hide(0);
+				$("#SkillsWrapper").hide(0);
+				$("#goBack").hide(0);
+				$("#ProjectWrapper").hide(0);
+				$(".projects").click(function(){
+					$("#name").slideUp(400);
+					setTimeout(function() {$("#goBack").show();},600);
+					$(".headerWrapper").hide(400);
+					setTimeout(function (){$("#ProjectWrapper").slideDown(100);}, 500);
+			  	});
+			  	//SkillsWrapper
+			  	$(".skills").click(function(){
+					$("#name").slideUp(400);
+					setTimeout(function() {$("#goBack").show();},1000);
+					$(".headerWrapper").hide(400);
+					setTimeout(function (){$("#SkillsWrapper").slideDown(700);}, 500);
+			  	});
+			  	$(".education").click(function(){
+			  		setTimeout(function() {$("#goBack").show();},600);
+					$("#name").slideUp(400);
+					$(".headerWrapper").hide(400);
+					setTimeout(function (){$("#EducationWrapper").slideDown(100);}, 500);
+			  	});
+			  	$(".nameLink").click(function(){
+			  		$("#EducationWrapper").slideUp(500);
+			  		$("#SkillsWrapper").slideUp(500);
+			  		$("#goBack").hide(0);
+			  		$("#ProjectWrapper").slideUp(500);
+			  		setTimeout(function (){$("#name").slideDown(350);
+					$(".headerWrapper").fadeIn(200);}, 400);
+			  	});
+			});
+		</script>
+
 	</head>
 	<body>
-		<div id="name">
-			<h1 class="animated slideInDown" style="-webkit-animation-delay: 0.2s; animation-delay: 0.2s;">Jason Tuhy</h1>
+		<!-- SLIDESHOW
+		<script type="text/javascript">
+			var i = 0;
+			var n = 3;
+			function switchImage(){
+				if (i < (n-1)){
+					$("#image" + i).hide();	
+					$("#image" + (i+1)).show();
+					
+				}
+				else{
+					i = -1;
+					$("#image" + (n-1)).hide();
+					$("#image0").show();
+				}
+				i++;
+				
+			}
+			$(document).ready(function(){
+				$("#image1").hide();
+				$("#image2").hide();
+				setInterval("switchImage()", 1000);
+			});
+			<div id="slideShow">
+				<img id="image0" class="slideShowImage" src="images/bg.jpg">
+				<img id="image1" class="slideShowImage" src="images/frames.png">
+				<img id="image2" class="slideShowImage" src="images/hD1dNoq.jpg">
+			</div> -->
+		</script>
+		<div class = "headerWrapper">
+			<div id="name">
+				<h1 class="animated slideInDown" style="-webkit-animation-delay: 0.2s; animation-delay: 0.2s;">Jason Tuhy</h1>
+			</div>
+			<div id="spacer"></div>
+			<div id="firstWrapper" style="-webkit-animation-delay: 0.8s; animation-delay: 0.8s;" class="animated slideInLeft">
+				<div class="subWrapper"><h1><a class="description projects" href="#">Projects</a></h1></div>
+				<div class="subWrapper"><h1><a class="description skills" href="#">Skills</a></h1></div>
+				<div class="subWrapper"><h1><a class="description education" href="#">Education</a></h1></div>
+			</div>
 		</div>
-		<div id="spacer"></div>
-		<div id="firstWrapper" style="-webkit-animation-delay: 0.8s; animation-delay: 0.8s;" class="animated slideInLeft">
-			<div class="subWrapper"><h1><a class="description" href="projects.html">Projects</a></h1></div>
-			<div class="subWrapper"><h1><a class="description" href="skills.html">Skills</a></h1></div>
-			<div class="subWrapper"><h1><a class="description" href="education.html">Education</a></h1></div>
+
+		
+		<!-- To show when the user hits the education button -->
+		<div id="EducationWrapper">
+			<div class="fixedName">
+				<h1><a class="nameLink" href="#">Jason Tuhy</a></h1>
+				<hr style="width: 78%;" align="center">
+			</div>
+			<div id="otherSpacer"></div>
+			<div class="firstWrapper">
+				<h1 align="center" class="programLanguages">High School: <a  href="bcts.bergen.org">Bergen County Academies</a> <br/>Computer Science Classes:</h1>
+				<div class="singleList" align="center">
+					<div class="singleListE">
+						<ul class="list" align="left">
+							<li>
+								<p>Computer Science I (2011-2012)</p>
+								<ul>
+									<a href="https://docs.python.org/3/"><li class="subItem">Studied  Python </li></a>
+								</ul>
+							</li>
+							<li>
+								<p>AP Computer Science (2012-2013)</p>
+								<ul>
+									<li class="subItem">Began learning Java and took the AP compsci test</li>
+								</ul>
+							</li>
+							<li>
+								<p>Data Structures</p>
+								<ul>
+									<li class="subItem">Began studying algroithms (e.g. quicksort, and dijkstra&#39;s shortest path etc) and data structures (e.g. linked list, trees, heaps, etc)</li>
+								</ul>
+							</li>
+							<li>
+								<p>C Programming</p>
+								<ul>
+									<li class="subItem">Lerned the basics of the C language.</li>
+								</ul>
+							</li>
+							<li>
+								<p>Linux</p>
+								<ul>
+									<li class="subItem">Learned the basics of programming in bash.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
+
+		<!-- To show when the user hits the skills button -->
+		<div id="SkillsWrapper">
+			<div class="fixedName">
+				<h1><a class="nameLink" href="#">Jason Tuhy</a></h1>
+				<hr style="width: 78%;color:black;" align="center">
+			</div>
+			<div id="otherSpacer"></div>
+			<div class="firstWrapper">
+				<h1 align="center" class="programLanguages">Programming Languages</h1>
+				<div class="listWrapper">
+					<h2 class="listTitle">Most Experienced Languages</h2>
+					<ul class="list">
+						<li>
+							<p>Java</p>
+						</li>
+						<li>
+							<p>Python</p>
+						</li>
+						<li>
+							<p>HTML</p>
+						</li>
+					</ul>
+				</div>
+				<div class="listWrapper">
+					<h2 class="listTitle">Learning/Familiar Languages</h2>
+					<ul class="list">
+						<li>
+							<p>CSS</p>
+						</li>
+						<li>
+							<p>Javascript</p>
+						</li>
+						<li>
+							<p>C/C++</p>
+						</li>
+						<li>
+							<p>bash</p>
+						</li>
+						<li>
+							<p>JQuery</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<div class="firstWrapper">
+				<h1 align="center">Technologies Used</h1>
+				<div class="listWrapper">
+					<h2 class="listTitle">Most Experienced</h2>
+					<ul class="list">
+						<li>
+							<p>Google App Engine</p>
+						</li>
+						<li>
+							<p>Git</p>
+						</li>
+						<li>
+							<p>Flask</p>
+						</li>
+					</ul>
+				</div>
+				<div class="listWrapper">
+					<h2 class="listTitle">Learning/Familiar</h2>
+					<ul class="list">
+						<li>
+							<p>Heroku</p>
+						</li>
+						<li>
+							<p>MongoDB</p>
+						</li>
+						<li>
+							<p>Node.js</p>
+						</li>
+						<li>
+							<p>Twitter Bootstrap</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- To show when the user hits the projects button -->
+		<div id="ProjectWrapper">
+			<div class="fixedName" style="background-color:#FC923A;">
+				<h1><a class="nameLink" href="#">Jason Tuhy</a></h1>
+				<hr style="width: 78%;color:black;background-color:#000;color:#000; " align="center">
+			</div>
+			<div id="otherSpacer"></div>
+			<div class="project">
+				<h1 class="projectTitle">
+					Frames <span class="date">- Fall 2013</span>
+				</h1>
+				<a href="https://www.hackerleague.org/hackathons/hackru-fall-2013/hacks/frames"><img class="projectImage" src="images/frames.png"></a>
+				<p class="techUsedText"><span class="techUsed">Technologies Used: </span>Java (Android SDK), HTML/CSS, Google App Engine</p>
+				<p class="projectDescription">Frames was made at HackRU fall 2014. It is an image sharing app based entirely off of location. </p>
+			</div>
+		</div>
+		<div id="nameLinkHolder"><a class="nameLink" href="#" id="goBack">Go back</a></div>
 	</body>
 </html>

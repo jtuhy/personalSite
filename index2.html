@@ -21,6 +21,23 @@
 
 		<!-- Prevents smartphones from scaling pages down -->
 		<meta name="viewport" content="initial-scale=1">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".projects").click(function(){
+					$("#name").slideUp(350);
+		    		setTimeout(function (){location.href="projects.html";}, 450);
+			  	});
+			  	$(".skills").click(function(){
+					$("#name").fadeOut(150);
+		    		setTimeout(function (){location.href="skills.html";}, 200);
+			  	});
+			  	$(".education").click(function(){
+					$("#name").slideUp(350);
+		    		setTimeout(function (){location.href="projects.html";}, 450);
+			  	});
+			});
+		</script>
 	</head>
 	<body>
 		<div id="name">
@@ -31,10 +48,10 @@
 			<hr style="width: 78%;" align="center">
 		</div> -->
 		<div id="spacer"></div>
-		<div id="firstWrapper" >
-			<div class="subWrapper"><h1><a class="description" href="projects.html">Projects</a></h1></div>
-			<div class="subWrapper"><h1><a class="description" href="skills.html">Skills</a></h1></div>
-			<div class="subWrapper"><h1><a class="description" href="education.html">Education</a></h1></div>
+		<div id="firstWrapper">
+			<div class="subWrapper"><h1><a class="description projects" href="#">Projects</a></h1></div>
+			<div class="subWrapper"><h1><a class="description skills" href="#">Skills</a></h1></div>
+			<div class="subWrapper"><h1><a class="description education" href="#">Education</a></h1></div>
 		</div>
 	</body>
 </html>

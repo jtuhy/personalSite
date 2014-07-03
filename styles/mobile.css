@@ -9,15 +9,14 @@
     margin-right:auto;
     height: 150px;
 	border-bottom: 1px solid black;
-	font-size: 4pt;
-
+	font-size: 15pt;
 	z-index: 1;
 }
 body{
 	background:	url("../images/newBG.jpg")
 
 }
-#fixedName{
+.fixedName{
 	width: 100%;
 	margin: 0 auto;
 	position: fixed;
