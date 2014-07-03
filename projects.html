@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
 		<title>Jason Tuhy</title>
-		<link rel="stylesheet" type="text/css" href="styles/animate.css">
 		<!-- Media query for narrow browser width -->
 		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="styles/mobile.css" />
 
 		<!-- Media query for smartphones -->
 		<link rel="stylesheet" media="only screen and (max-device-width: 568px)" href="styles/mobile.css" />
-
 
 		<!-- Media query for medium browser width -->
 		<link rel="stylesheet" media="only screen and (min-width: 481px) and (max-width: 960px)" href="styles/tablet.css" />
@@ -17,6 +14,7 @@
 		<!-- Media query for tablets -->
 		<link rel="stylesheet" media="only screen and (min-device-width : 768px) and (max-device-width : 1024px)" href="styles/tablet.css" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
 		<!-- Media query for full browser width -->
 		<link rel="stylesheet" media="only screen and (min-width: 961px)" href="styles/desktop.css" />
 
@@ -24,14 +22,18 @@
 		<meta name="viewport" content="initial-scale=1">
 	</head>
 	<body>
-		<div id="name">
-			<h1 class="animated slideInDown" style="-webkit-animation-delay: 0.2s; animation-delay: 0.2s;">Jason Tuhy</h1>
+		<div id="fixedName" style="background-color:#FC923A;">
+			<h1><a class="nameLink" href="index2.html">Jason Tuhy</a></h1>
+			<hr style="width: 78%;color:black;background-color:#000;color:#000; " align="center">
 		</div>
-		<div id="spacer"></div>
-		<div id="firstWrapper" style="-webkit-animation-delay: 0.8s; animation-delay: 0.8s;" class="animated slideInLeft">
-			<div class="subWrapper"><h1><a class="description" href="projects.html">Projects</a></h1></div>
-			<div class="subWrapper"><h1><a class="description" href="skills.html">Skills</a></h1></div>
-			<div class="subWrapper"><h1><a class="description" href="education.html">Education</a></h1></div>
+		<div id="otherSpacer"></div>
+		<div class="project">
+			<h1 class="projectTitle">
+				Frames <span class="date">- Fall 2013</span>
+			</h1>
+			<a href="https://www.hackerleague.org/hackathons/hackru-fall-2013/hacks/frames"><img class="projectImage" src="images/frames.png"></a>
+			<p class="techUsedText"><span class="techUsed">Technologies Used: </span>Java (Android SDK), HTML/CSS, Google App Engine</p>
+			<p class="projectDescription">Frames was made at HackRU fall 2014. It is an image sharing app based entirely off of location. </p>
 		</div>
 	</body>
 </html>

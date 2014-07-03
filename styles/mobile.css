@@ -1,0 +1,129 @@
+#name{
+	width: 80%;
+	text-align: center;
+	position: absolute;
+	left:0;
+	right: 0;
+	top: 25%;
+	margin-left:auto;
+    margin-right:auto;
+    height: 150px;
+	border-bottom: 1px solid black;
+	font-size: 4pt;
+
+	z-index: 1;
+}
+body{
+	background:	url("../images/newBG.jpg")
+
+}
+#fixedName{
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	height: 100px;
+	text-align: center;
+	top: 0px;
+	font-size: 25pt;
+	z-index: 2;
+	line-height: 0px;
+	background:	url("../images/newBG.jpg")
+}
+#spacer{
+	height: 350px;
+	width: 100%;
+
+}
+#otherSpacer{
+	height: 110px;
+	width: 100%;
+
+}
+.firstWrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+.nameLink{
+	font-size: 10pt;
+	margin-bottom: 0px;
+}
+.nameLink:hover{
+	text-decoration:underline;
+}
+.subWrapper{
+	width: 33.3333333%;
+	text-align: center;
+	float: left;
+
+}
+.description{
+	font-size: 8pt;
+}
+.listWrapper{
+	width: 50%;
+	text-align: center;
+	float: left;
+}
+a:link{
+	font-size: 25pt;
+	text-decoration: none;
+	color: black;
+}
+.list{
+	list-style-type: square;
+	list-style-position:outside;
+	font-size: 13pt;
+}
+a:hover{
+	text-decoration: underline;
+
+}
+a:visited{
+	font-size: 25pt;
+	text-decoration: none;
+	color: black;
+}
+.project{
+	width: 100%;
+
+}
+.projectTitle{
+	font-size: 30pt;
+	text-align: center;
+}
+.projectImage{
+	width: 80%;
+	height: 20%;
+	min-width: 50px;
+	min-height: 50px;
+	display: block;
+	margin:auto;
+}
+.techUsed{
+	font-size: 20pt;
+	text-decoration: bolder;
+}
+.techUsedText{
+	font-size: 15pt;
+	text-decoration: none;	
+	text-align: center;
+}
+.date{
+	font-size: 15pt;
+	text-align: center;
+}
+.projectDescription{
+	font-size: 12pt;
+	text-align: center;
+}
+a.description{
+	font-size: 20pt;
+	min-height: 50px;
+	min-width: 50px;
+}
+.programLanguages{
+	font-size: 25pt;
+}
+.listTitle{
+	font-size: 15pt;
+}
